@@ -2,7 +2,7 @@ Project WNDR3700v5-firmware
 
 # README
 
-This tools were created to build a firmware image for the Netgear WNDR3700v5.
+These tools were created to build a firmware image for the Netgear WNDR3700v5.
 You MUST have a prebuilt firmware file from OpenWRT (for example).
 
 The solution contains 2 projects:
