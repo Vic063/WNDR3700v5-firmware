@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WNDR3700v5-Firmware", "WNDR3700v5-Firmware\WNDR3700v5-Firmware.vcxproj", "{44B4049B-E435-4514-8130-D8AED7CB7B5E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zipImage", "zipImage\zipImage.vcxproj", "{B1F2D9E5-0760-4A0A-8EDA-CF5FA369E1D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44B4049B-E435-4514-8130-D8AED7CB7B5E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44B4049B-E435-4514-8130-D8AED7CB7B5E}.Debug|Win32.Build.0 = Debug|Win32
+		{44B4049B-E435-4514-8130-D8AED7CB7B5E}.Release|Win32.ActiveCfg = Release|Win32
+		{44B4049B-E435-4514-8130-D8AED7CB7B5E}.Release|Win32.Build.0 = Release|Win32
+		{B1F2D9E5-0760-4A0A-8EDA-CF5FA369E1D9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1F2D9E5-0760-4A0A-8EDA-CF5FA369E1D9}.Debug|Win32.Build.0 = Debug|Win32
+		{B1F2D9E5-0760-4A0A-8EDA-CF5FA369E1D9}.Release|Win32.ActiveCfg = Release|Win32
+		{B1F2D9E5-0760-4A0A-8EDA-CF5FA369E1D9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
