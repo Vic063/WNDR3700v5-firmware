@@ -36,7 +36,7 @@ int verifyBinaryFile( const uint8_t *buffer )
 int initializeSercommPID( sercomm_pid_t *sercomm_pid )
 {
 	char fw[6], *pEnd;
-	uint32_t fw_high, fw_low;
+	uint32_t fw_major, fw_minor, fw_micro;
 	int err;
 
 	memset(sercomm_pid, 0, sizeof(sercomm_pid_t));
@@ -46,15 +46,19 @@ int initializeSercommPID( sercomm_pid_t *sercomm_pid )
 	memcpy(sercomm_pid->p_id, "A001", 4);
 	memcpy(sercomm_pid->magic_e, "sErCoMm", 7);
 
-	puts("Please enter the firmware version (ex: 13.37):");
+	puts("Please enter the firmware version (ex: 1.3.37):");
 	scanf("%s", fw);
 
-	err = sscanf(fw, "%d.%d", &fw_high, &fw_low);
-	if (err != 2)
+	err = sscanf(fw, "%d.%d.%d", &fw_major, &fw_minor, &fw_micro);
+	if (err != 3)
+	{
+		puts("Bad firmware version.");
 		return -1;
+	}
 
-	sprintf(fw, "0x%02d", fw_low);
-	sercomm_pid->fw_ver[0] = fw_high & 0xFF;
+	sprintf(fw, "0x%1d%1d", fw_major, fw_minor);
+	sercomm_pid->fw_ver[0] = strtol(fw, &pEnd, 16) & 0xFF;
+	sprintf(fw, "0x%02d", fw_micro);
 	sercomm_pid->fw_ver[1] = strtol(fw, &pEnd, 16) & 0xFF;
 
 	return 0;

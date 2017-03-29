@@ -76,7 +76,7 @@ int main( int argc, char **argv )
 	memset(tmpFile, 0, 256);
 	strncpy(tmpFile, filename, strlen(filename));
 	strcat(tmpFile, ".tmp");
-	
+
 	fs = fopen(tmpFile, "wb");
 	if (!fs)
 	{
